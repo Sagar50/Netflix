@@ -1,9 +1,19 @@
-import React from 'react'
-
+import React from 'react';
+import "./HomeScreen.css";
+import Nav from './Nav';
+import Banner from './Banner';
 function HomeScreen() {
   return (
-    <div className="homeScreen">HomeScreen</div>
+    <div className="homeScreen">
+        { /* nav */ }
+        <Nav />
+        
+        <Banner />
+        { /* banner */ }
+
+        { /* body */ } 
+    </div>
   )
 }
 
-export default HomeScreen
+export default HomeScreen;
