@@ -22,7 +22,6 @@ function Banner() {
         }
         fetchData();
     }, [])
-    console.log(movie)
     return (
         <header className='banner' style={{
             backgroundImage:`url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,

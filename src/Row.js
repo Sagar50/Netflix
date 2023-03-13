@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import './Row.css';
 import axios from './axios'
 
+
 function Row({ title, fetchUrl, isLargeRow = false }) {
     const [movies, setMovies] = useState([]);
 
@@ -14,6 +15,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
             return request;
         }
         fetchData();
+        
     }, [fetchUrl])
     
 
