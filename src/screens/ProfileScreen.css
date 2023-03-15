@@ -1,0 +1,194 @@
+.profileScreen {
+    height: 100vh;
+    color: white;
+    
+}
+
+.profileScreen_body {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding-top: 10%;
+    max-width: 800px;
+
+}
+.profileScreen_body > h1 {
+    font-weight: 60px;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 20px;   
+    border-bottom: 1px solid #282c2d;
+     
+}
+.profileScreen_info {
+    display: flex;
+    border-bottom: 1px solid #282c2d;
+    padding-bottom: 30px;
+}
+
+.profileScreen_info > img {
+    height: 100px;
+}
+
+.profileScreen_details {
+    color: white;
+    margin-left: 25px;
+    flex: 1;
+    
+}
+
+.profileScreen_details h2{
+    padding-left: 20px;
+    font-size: 15px;
+    padding: 15px;
+    background-color: gray;
+    flex: 1;
+}
+
+.profileScreen_button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 5%;
+    width: 100%;
+    color: white;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.emailContainer_checkbox {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.6em;
+    position: relative;
+    top: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+.checkbox {
+    appearance: none;
+    background-color: black;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.4em;
+    height: 1.4em;
+    border: 0.05em solid gray;
+    border-radius: 0.1em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.form-control + .form-control {
+    margin-top: 1em;
+  }
+
+.checkbox::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: red;
+}
+
+.checkbox:checked::before {
+    transform: scale(1);
+  }
+
+.languageContainer, .ratingContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color:#a8a6a6;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #282c2d;
+}
+.languageContainer label, .ratingContainer label {
+    margin-bottom: 5px;
+}
+.languagesDropdown {
+    width: 20%;
+    background: black ;
+    color: white;
+}
+.languagesDropdown option:hover{
+    background-color: #e50914;
+}
+
+.ratingDropdown {
+    width: 50%;
+    background: black ;
+    color: white;
+}
+
+.languagesDropdown:focus {
+    outline: none;
+}
+.ratingDropdown:focus {
+    outline: none;
+}
+
+.autoPlay_title  {
+    font-size: 24px;
+}
+.autoPlay_settingContainer {
+    color:#a8a6a6;
+}
+
+.settings_autoplayPreview, .settings_autoplayEpisodes {
+    font-size: 14px;
+    margin-left: 0;
+    gap: 15px;
+}
+
+.settings_autoplayEpisodes, .ratingDropdown, .languagesDropdown {
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 1120px){
+    .options_container {
+        display: flex;  
+    }
+    .profileScreen_save, .profileScreen_signOut{
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 1120px){
+    .profileScreen_info {
+        display: block;
+
+    }
+    .profileScreen_info > img {
+        width: 40%;
+        height: 40%;
+
+    }
+    .profileScreen_details{
+        margin-left: 0;
+    }
+    .emailContainer_checkbox{
+        margin-top: 10px;
+    }
+}
