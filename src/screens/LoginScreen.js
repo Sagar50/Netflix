@@ -1,15 +1,22 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import './LoginScreen.css'
 import SignupScreen from './SignupScreen'
 
 
 function LoginScreen() {
     const [signin, setSignIn] = useState(false)
+    const navigate = useNavigate();
 
+    function refreshPage(){ 
+        window.location.reload(); 
+    }
+    
     return (
     <div className="loginScreen">
         <div className="loginScreen_background">
             <img 
+                onClick={ refreshPage }
                 className='loginScreen_logo'
                 src='https://imgs.search.brave.com/FCtJ10H3eu8Hq_gFfZgIj8fMP4wvHWwjLMia4CM7fPw/rs:fit:1200:632:1/g:ce/aHR0cHM6Ly9wbGFz/dGljb2NlYW5zLm9y/Zy93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OC8wOS9uZXRmbGl4/LWxvZ28tMS5wbmc'
                 alt='Netflix Logo'
