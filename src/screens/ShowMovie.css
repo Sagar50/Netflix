@@ -1,0 +1,97 @@
+.showMovie_Screen, .backgroundPic{
+    height: 100vh;
+
+}
+
+.backgroundPic {
+    position: relative;
+    object-fit: contain;
+}
+
+
+.movie_info {
+    margin-left: 40px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+.movie_title {
+    font-size: 4rem;
+    font-weight: 800;
+    padding: 0.3rem;
+    color: grey;
+}
+
+.movie_description {
+    width: 60rem;
+    line-height: 1.3rem;
+    padding: 4.8px;
+    padding-top: 1rem;
+    font-size: 1rem;
+    max-width: 360px;
+    height: 80px;
+    color: grey;
+    
+}
+.movie_buttons {
+    padding: 4.8px;
+}
+
+.movie_button {
+    
+    border: none;
+    border-radius: 0.2vw;
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    font-weight: 700;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.movie_button:hover {
+    color: black;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+
+.videoPlayer_holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.videoPlayer_holder .video {
+    width: 60%;
+    height: 50%;
+    max-width: 1000px;
+    transform: scale(0);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: all 0.3s;
+    margin: auto;
+}
+.videoPlayer_holder .close {
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+.videoPlayer_holder.show {
+    pointer-events: all;
+    opacity: 1;
+}
+.videoPlayer_holder.show .video {
+    transform: scale(1);
+}
+
