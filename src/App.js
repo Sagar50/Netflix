@@ -2,36 +2,17 @@ import React, { useEffect } from 'react';
 import './App.css';
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import ProfileScreen from './screens/ProfileScreen';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomeScreen />,
-  },
-  
-]);
-
-const loginRouter = createBrowserRouter([
-  {
-    path: "/login",
-    element: <LoginScreen />,
-  },
-  
-]);
+import ShowMovie from './screens/ShowMovie';
 
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-  
+
   useEffect(() =>{
     const unsubscribe = auth.onAuthStateChanged(
       (userAuth) => {
@@ -44,18 +25,27 @@ function App() {
             })
           );
         } else {
-          dispatch(logout);
-          //logged out
+          dispatch(logout());
         }
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return ( 
     <div className="app">
-    <React.StrictMode>
-      {!user ? (<RouterProvider router={loginRouter}/>): (<RouterProvider router={router} />)}
-    </React.StrictMode>
+    <Router>
+        {!user ? (
+            <LoginScreen />
+        ) : (
+          <Routes>
+            <Route exact path="/" element={<HomeScreen />}/>
+            
+            <Route exact path="/profile" element={<ProfileScreen />} />
+            <Route exact path="/showMovie" element={<ShowMovie />}/>
+          </Routes>
+          )
+        }
+    </Router>
     </div>
   );
 }
