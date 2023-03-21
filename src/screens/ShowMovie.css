@@ -12,6 +12,7 @@
 .movie_info {
     margin-left: 40px;
     padding-top: 140px;
+    padding-bottom: 140px;
     height: 190px;
 }
 
@@ -95,3 +96,11 @@
     transform: scale(1);
 }
 
+.clicked {
+    transition: all ease 1s;
+}
+
+.castInformation{
+    color: white;
+    margin-top: 130px;
+}
