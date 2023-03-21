@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import castRequest from './CastRequests';
+import castRequest from './API/CastRequests';
 import axios from './axios';
 import './CastInfo.css';
 import photoRequest from './API/PhotoAPI';
