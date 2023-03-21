@@ -1,0 +1,30 @@
+.castContainer {
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(85, 83, 83, 0.5), rgba(0, 0, 0, 0));
+    padding: 0px 40px;
+
+}
+.castInfo {
+    height: 300px;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-top: 30px;
+}
+
+.castInfo::-webkit-scrollbar {
+    display: none;
+}
+
+.actorName {
+    text-align: center;
+}
+.actorContainer {
+    margin-right: 40px;
+    width: 150px;
+}
+.actorImg {
+    height: 180px;
+    width: 150px;
+    border-radius: 50%;
+}
