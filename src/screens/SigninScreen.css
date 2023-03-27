@@ -1,11 +1,11 @@
-.signUpScreen {
+.signInScreen {
     display: flex;
     height: 100%;
     background: url("https://imgs.search.brave.com/ZwZXRQYKe3NwsaMtETwYyUTcQESrbt4yBIzcVLiD3To/rs:fit:1200:674:1/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/bWF4LzEyMDAvMSps/OWRJdk9WSDVLaHBL/MUxGdmdvQ2xBLmpw/ZWc") center no-repeat;
     background-size: cover;
 }
 
-.signUpScreen_logo {
+.signInScreen_logo {
     position: fixed;
     left: 0;
     width: 150px;
@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-.signUpScreen_button {
+.signInScreen_button {
     position: fixed;
     right: 20px;
     top: 20px;
@@ -28,7 +28,7 @@
     font-weight: 600;
 }
 
-.signUpScreen_gradient {
+.signInScreen_gradient {
     width: 100vw;
     z-index: 1;
     height: 100vh;
@@ -41,7 +41,7 @@
     );
 }
 
-.signUpScreen_body {
+.signInScreen_body {
     position: absolute;
     top: 20vh;
     margin-left: auto;
@@ -55,9 +55,22 @@
    
 }
 
+.signInScreen_body > h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+.signInScreen_body > h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
 
+.signInScreen_body > h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
 
-.signUpScreen_input > form > input{
+.signInScreen_input > form > input{
     padding: 10px;    
     outline-width: 0;
     height: 30px;
@@ -65,11 +78,11 @@
     border: none;
     max-width: 600px;
 }
-.signUpScreen_input {
+.signInScreen_input {
     margin: 20px;
 }
 
-.signUpScreen_getStarted {
+.signInScreen_getStarted {
     padding: 16px 20px;
     font-size: 1rem;
     background: #e50914;
@@ -79,7 +92,7 @@
     cursor: pointer;
 }
 
-.signUpScreen_bodyContainer {
+.signInScreen_bodyContainer {
     max-width: 300px;
     background: rgba(0, 0, 0, 0.85);
     padding: 70px;
@@ -88,12 +101,12 @@
     margin-top: 0px;
 }
 
-.signUpScreen_bodyContainer > form {
+.signInScreen_bodyContainer > form {
     display: flex;
     flex-direction: column;
 }
 
-.signUpScreen_bodyContainer > form > input {
+.signInScreen_bodyContainer > form > input {
     outline-width: 0;
     height: 40px;
     margin-bottom: 14px;
@@ -101,12 +114,12 @@
     border: none;
     padding: 5px 15px;
 }
-.signUpScreen_bodyContainer > form > h1 {
+.signInScreen_bodyContainer > form > h1 {
     text-align: left;
     margin-bottom: 25px;
 }
 
-.signUpScreen_bodyContainer > form > button {
+.signInScreen_bodyContainer > form > button {
     padding: 16px 20px;
     font-size: 1rem;
     color: white;
@@ -118,37 +131,36 @@
     margin-top: 20px;
 }
 
-.signUpScreen_bodyContainer > form > h4 {
+.signInScreen_bodyContainer > form > h4 {
     text-align: left;
     margin-top: 25px;
 }
-.signupScreen_gray {
+.signInScreen_gray {
     color: gray;
     margin-right: 5px;
 }
 
-.signupScreen_link:hover {
+.signInScreen_link:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-
 @media screen and (max-width: 500px){
-    .signUpScreen_bodyContainer form h1 {
+    .signInScreen_bodyContainer form h1 {
         font-size: 7vw;
     }
-    .signUpScreen_bodyContainer {
+    .signInScreen_bodyContainer {
         padding: 40px;
     }
 }
 @media screen and (max-width: 300px){
-    .signUpScreen_bodyContainer form h1 {
+    .signInScreen_bodyContainer form h1 {
         font-size: 7vw;
     }
-    .signUpScreen_logo {
+    .signInScreen_logo {
         width: 120px;
     }
-    .signUpScreen_button {
+    .signInScreen_button {
         font-size: 0.9rem;
     }
 }

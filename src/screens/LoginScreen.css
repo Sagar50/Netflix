@@ -70,11 +70,19 @@
     font-weight: 400;
 }
 
+.loginScreen_input > form {
+    display: flex;
+    width: fit-content;
+}
+.loginScreen_input form {
+   margin-left: auto;
+   margin-right: auto;
+}
 .loginScreen_input > form > input{
     padding: 10px;    
     outline-width: 0;
     height: 30px;
-    width: 30%;
+    width: 30vw;
     border: none;
     max-width: 600px;
 }
@@ -90,4 +98,54 @@
     border: none;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+    .loginScreen_body {
+        top: 15%;
+    }
+    .loginScreen_body > h1{
+        font-size: 2.75rem;
+    }
+    .loginScreen_body > h2{
+        font-size: 1.625rem;
+        font-weight: 400;
+    }
+    
+    .loginScreen_body > h3{
+        font-size: 0.925rem;
+    }
+}
+    
+@media screen and (max-width: 400px){
+    .loginScreen_body {
+        top: 15%;
+    }
+    .loginScreen_body > h1{
+        font-size: 2.5rem;
+    }
+    .loginScreen_body > h2{
+        font-size: 1.375rem;
+        font-weight: 400;
+    }
+    
+    .loginScreen_body > h3{
+        font-size: 0.675rem;
+    }
+    .loginScreen_input form {
+        display: block;
+    }
+    .loginScreen_input {
+        height: fit-content;
+    }
+    .loginScreen_getStarted {
+        font-size: 12px;
+    }
+    .loginScreen_logo {
+        width: 120px;
+    }
+    .loginScreen_button {
+        font-size: 0.9rem;
+    }
+    
 }
