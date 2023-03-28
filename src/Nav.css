@@ -32,3 +32,15 @@
 .nav_black{
     background-color: black;
 }
+
+@media screen and (max-width: 400px){
+    .nav_logo {
+        width: 50vw;
+        padding-left: 0;
+
+    }
+    .nav_avatar {
+        width: 15vw;
+    }
+
+}

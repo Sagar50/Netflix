@@ -1,0 +1,38 @@
+.imgContainer img {
+    width: 150px;
+    height: 200px;
+}
+
+.movieContainer {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.descContainer {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.descH3 {
+    width: 50%;
+    margin-top: 15px;
+}
+
+.moreInfo_bttn {
+    margin-top: 15px;
+    border: none;
+    border-radius: 0.2vw;
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    font-weight: 700;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.moreInfo_bttn:hover {
+    color: black;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}

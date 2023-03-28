@@ -1,5 +1,5 @@
 .profileScreen {
-    height: 100vh;
+    height: fit-content;
     color: white;
     
 }
@@ -26,10 +26,31 @@
     display: flex;
     border-bottom: 1px solid #282c2d;
     padding-bottom: 30px;
+    
 }
 
-.profileScreen_info > img {
+.leftCol_container > img {
     height: 100px;
+}
+
+.viewList_button {
+    margin: auto;
+    display: block;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 0.2vw;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    font-weight: 700;
+    background-color: rgba(107, 107, 107, 0.5);
+}
+
+.viewList_button:hover {
+    color: black;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
 }
 
 .profileScreen_details {
@@ -176,8 +197,12 @@
     }
 }
 @media screen and (max-width: 1120px){
+    .profileScreen_body {
+        width: 60%;
+    }
     .profileScreen_info {
         display: block;
+        
 
     }
     .profileScreen_info > img {
@@ -191,4 +216,44 @@
     .emailContainer_checkbox{
         margin-top: 10px;
     }
+    .viewList_button, .leftCol_container img {
+        width: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .profileScreen_body {
+        padding: 12% 2%;
+    }
+    select {
+        width: 100% !important; 
+    }
+}
+@media screen and (max-width: 580px){
+    .profileScreen_body h1 {
+        font-size: 6vw;
+    }
+    .profileScreen_body {
+        padding: 24% 2%;
+    }
+    .form-control input {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .emailContainer_checkbox {
+        display: block;
+    }
+    .emailContainer_checkbox .form-control {
+        margin: 0;
+        font-size: 26px;
+        justify-content: center;
+    }
+    
+    
 }

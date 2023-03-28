@@ -4,7 +4,7 @@ const castRequest = {
     fetchCast: `${OMDb_API}&`,
     fetchActors: `https://api.themoviedb.org/3/tv/`,
     fetchActorsKey: `/credits?api_key=${API_KEY}`,
-    fetchActorsLang: `&language=en-US`
+    fetchActorsLang: `&language=en-US`,
+    fetchMovieActors: `https://api.themoviedb.org/3/movie/`
 }
-
 export default castRequest

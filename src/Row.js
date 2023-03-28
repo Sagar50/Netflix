@@ -3,28 +3,43 @@ import './Row.css';
 import axios from './axios'
 import { useNavigate } from 'react-router-dom';
 
-function Row({ title, fetchUrl, isLargeRow = false }) {
+
+function Row({ title, fetchUrl, id, isLargeRow = false }) {
     const [movies, setMovies] = useState([]);
     const navigate = useNavigate();
 
-    const base_url = "https://image.tmdb.org/t/p/original/"
+    const base_url = "https://image.tmdb.org/t/p/original/";
+    const baseMURL = "https://api.themoviedb.org/3/movie/";
+    const baseTURL = "https://api.themoviedb.org/3/tv/";
 
     useEffect(() =>{
         async function fetchData(){
-            const request = await axios.get(fetchUrl);
-            setMovies(request.data.results);
-            return request;
+            if(title === "Show"){
+                const request = await axios.get(baseTURL + id +fetchUrl);
+                setMovies(request.data.results);
+                return request;
+            } else if (title === "Movie"){
+                const request = await axios.get(baseMURL + id + fetchUrl);
+                setMovies(request.data.results);
+                return request;
+            } else {
+                const request = await axios.get(fetchUrl);
+                setMovies(request.data.results);
+                return request;
+            }
         }
         fetchData();
         
-    }, [fetchUrl])
+    }, [fetchUrl,title, id])
     
 
     return (
     <div className="row">
-        <h2>{title}</h2>
+        {(title !== "Show" && title !== "Movie") && <h2>{title}</h2>}
+        
         <div className="row_posters">
             {movies.map((movie) => (
+                
                 ((isLargeRow && movie?.poster_path) || 
                 (!isLargeRow && movie?.backdrop_path)) && (
                 <img 

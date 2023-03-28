@@ -8,8 +8,8 @@ const requests = {
     fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_grenres=35`,
     fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_grenres=27`,
     fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_grenres=10749`,
-    fetchDocumentariesMovies: `/discover/movie?api_key=${API_KEY}&with_grenres=99`
-    
+    fetchDocumentariesMovies: `/discover/movie?api_key=${API_KEY}&with_grenres=99`,
+    fetchRecommendations: `/recommendations?api_key=${API_KEY}&language=en-US&page=1`
 };
 
 export default requests;
