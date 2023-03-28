@@ -1,41 +1,89 @@
-.showMovie_Screen, .backgroundPic{
-    height: 100vh;
+.app {
+    height: fit-content !important;
 
 }
 
-.backgroundPic {
-    position: relative;
-    object-fit: contain;
+
+.showMovie_banner {
+    display: flex; 
+    height: 100%; 
 }
-
-
+.imgContainer {
+    flex: 1;
+    display: flex;
+}
+.backgroundPic{
+    flex: 1;
+    background-size: cover !important;
+    background-position: center center !important;
+}
 .movie_info {
-    margin-left: 40px;
+    padding-left: 40px;
     padding-top: 140px;
-    padding-bottom: 140px;
-    height: 190px;
+    /* padding-bottom: 140px; */
+    height: 100% - 140px;
+    width: 30%;
+    background: rgb(10, 10, 10);
 }
+.gradient {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(to right, rgb(10, 10, 10) 0%, rgba(10, 10, 10, 0.99) 8.1%, rgba(10, 10, 10, 0.953) 15.5%, rgba(10, 10, 10, 0.894) 22.5%, rgba(10, 10, 10, 0.824) 29%, rgba(10, 10, 10, 0.74) 35.3%, rgba(10, 10, 10, 0.647) 41.2%, rgba(10, 10, 10, 0.55) 47.1%, rgba(10, 10, 10, 0.45) 52.9%, rgba(10, 10, 10, 0.353) 58.8%, rgba(10, 10, 10, 0.26) 64.7%, rgba(10, 10, 10, 0.176) 71%, rgba(10, 10, 10, 0.106) 77.5%, rgba(10, 10, 10, 0.047) 84.5%, rgba(10, 10, 10, 0.01) 91.9%, rgba(10, 10, 10, 0) 100%);
+}
+.movieTitle_rating {
+    display: flex;
+    padding: 1.5%;
+}
+.rating {
+    text-align: center;
+    color: white;
+}
+.starSpan:after {
+    content: "\2B50";
 
+}
+.ratingSpan, .starSpan {
+    font-size: 3vw;
+}
+.voteCount_span {
+    margin-left: 10px;
+    font-size: 1vw;
+}
 .movie_title {
-    font-size: 4rem;
+    font-size: 3vw;
     font-weight: 800;
-    padding: 0.3rem;
-    color: grey;
+    color: white;
+    
 }
-
+.otherInfo {
+    color: grey;
+    padding-left: 1.5%;
+}
+.otherInfo div {
+    margin-bottom: 10px;
+}
+.otherInfo div span {
+    margin-right: 10px;
+}
+.otherNames {
+    font-size: 1.25vw;
+}
+.yearCountry {
+   display: flex;
+   color: white;
+}
 .movie_description {
-    width: 60rem;
     line-height: 1.3rem;
-    padding: 4.8px;
-    padding-top: 1rem;
+    padding: 1.5%;
     font-size: 1rem;
     max-width: 360px;
-    height: 80px;
     color: grey;
     
 }
 .movie_buttons {
-    padding: 4.8px;
+    padding: 1.5%;
 }
 
 .movie_button {
@@ -48,7 +96,10 @@
     color: white;
     outline: none;
     font-weight: 700;
+    width: 210px;
     background-color: rgba(51, 51, 51, 0.5);
+    font-size: 1vw;
+    margin-bottom: 5px;
 }
 
 .movie_button:hover {
@@ -57,6 +108,33 @@
     transition: all 0.2s;
 }
 
+.extraInfo_nav  {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 10px;
+    width: 100%;
+
+}
+.buttonHolders {
+    display: flex;
+    width: fit-content;
+    min-width: 50%;
+    margin: 4px auto;
+    justify-content: space-evenly;
+
+}
+
+.castNav_bttn, .videoNav_bttn {
+    cursor: pointer;
+    color: rgb(214, 212, 212);
+    font-size: 20px;
+    padding: 8px;
+}
+.castNav_bttn:hover, .videoNav_bttn:hover {
+    color: white;
+    border-bottom: 2px solid blue;
+}
+.bttn_clicked {
+    border-bottom: 2px solid red;
+}
 .videoPlayer_holder {
     position: fixed;
     top: 0;
@@ -83,7 +161,7 @@
 .videoPlayer_holder .close {
     position: absolute;
     top: 15%;
-    right: 20%;
+    right: 15% !important;
     font-size: 40px;
     cursor: pointer;
     color: white;
@@ -100,7 +178,72 @@
     transition: all ease 1s;
 }
 
-.castInformation{
+.castRecommendation_information{
     color: white;
-    margin-top: 130px;
+    height: fit-content;
+}
+@media screen and (max-width: 800px){
+    .movie_button {
+        width: 90%;
+        margin-right: 0;
+        font-size: 2vw;
+        margin-bottom: 10px;
+    }
+    .movie_description {
+        padding-top: 0;
+        margin-bottom: 10px;
+    }
+    .showMovie_banner {
+        flex-direction: column-reverse; 
+
+    }
+    .movie_info {
+        flex: 1;
+        width: auto;
+        padding-top: 0;
+    }
+    .imgContainer {
+        width: 100%;
+        height: 50vh;
+        flex: none;
+    }
+    .ratingSpan, .starSpan, .movie_title  {
+        font-size: 4vw;
+    }
+    .voteCount_span {
+        margin-left: 10px;
+        font-size: 2vw;
+    }
+    .otherNames {
+        font-size: 2vw;
+    }
+    .video {
+        width: 80% !important;
+        height: 40% !important;
+    }
+    .videoPlayer_holder .close{
+        right: 2% !important;
+
+    }
+}
+
+@media screen and (max-width: 400px){
+    .movie_button {
+        font-size: 4vw;
+        
+
+    }
+    .ratingSpan, .starSpan, .movie_title  {
+        font-size: 6vw;
+    }
+    .voteCount_span {
+        font-size: 4vw;
+    }
+    .otherNames {
+        font-size: 4vw;
+    }
+    .movie_description {
+        font-size: 12px;
+    }
+
 }
