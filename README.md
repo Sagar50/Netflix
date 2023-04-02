@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Note
-Uses multiple APIs - One of them being YT API which has a limit to the calls, so doesn't work if the the calls exceeds the limit.
+Uses multiple APIs - One of them being YT API which has a limit to the calls, so doesn't work if the calls exceed the limit.
 
 ## Available Scripts
 
